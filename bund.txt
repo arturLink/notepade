@@ -1,0 +1,41 @@
+proekt kordamine_OOP_1
+
+MAIN:
+
+class Koduloom:
+{
+private string nimi;
+private string varv;
+private string char sugu;
+private double kaal;
+private int vanus;
+private bool elav; // kui true, siis elav, kui false, siis on surnud
+
+public Koduloom()
+ {}
+
+public Koduloom(string Nimi="---", string varv="---", char sugu='-', double kaal=0.0, int vanus=0, bool elav=false)
+ {
+  this.nimi=nimi;
+  this.varv=varv;
+  this.sugu=sugu;
+  this.kaal=kaal;
+  this.vanus=vanus;
+  this.elav=elav;
+ }
+
+public Koduloom(Koduloom loom) //kloonimiseks
+ {
+  this.nimi=loom.nimi;
+  this.varv=loom.varv;
+  this.sugu=loom.sugu;
+  this.kaal=loom.kaal;
+  this.vanus=loom.vanus;
+  this.elav=loom.elav;
+ }
+
+public void print_info()
+ {
+  Console.Writeline("{0} {1} {2} ta on {3} ja tema kaal on {4} ja ta on {5} aastat vana",elav,varv,nimi,sugu,kaal,vanus);
+ }
+}
